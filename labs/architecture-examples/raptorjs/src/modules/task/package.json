@@ -1,0 +1,13 @@
+{
+    "name": "task",
+    "version": "1.0",
+    "description": "Task",
+    "raptor": {
+        "dependencies": [
+            { "module": "store" },
+            "Task.rhtml",
+            "Task.js"
+        ]
+        
+    }   
+}

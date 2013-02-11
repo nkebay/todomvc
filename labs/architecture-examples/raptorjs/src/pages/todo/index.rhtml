@@ -1,0 +1,61 @@
+<c:template
+    xmlns:c="core"
+    xmlns:html="html"
+    xmlns:optimizer="optimizer">
+    
+    <optimizer:page name="index" base-path="${data.pageOutputDir}">
+        <includes>
+            <module name="globals-css" />
+            <css path="app.css"/>
+            <module name="raptor" />
+            <module name="raptor/templating" />
+            <module name="store" />
+            <module name="task" />
+            <module name="app" />
+            <module name="router" />
+        </includes>
+    </optimizer:page>
+    
+    
+    <html html:doctype="html">
+        <head>
+            <title>RaptorJS: TODO Example New</title>
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+            <optimizer:slot name="head"/>
+        </head>
+        <body>
+            <section id="todoapp">
+                <header id="header">
+                    <h1>todos</h1>
+                    <input id="new-todo" placeholder="What needs to be done?" autofocus="autofocus" />
+                </header>
+                <!-- This section should be hidden by default and shown when there are todos -->
+                <section id="main">
+                    
+                    <ul id="todo-list"></ul>
+                </section>
+                <!-- This footer should hidden by default and shown when there are todos -->
+                <footer id="footer">
+                    <!-- This should be `0 items left` by default -->
+                    <span id="todo-count"><strong id="todoCount"></strong> item left</span>
+                    <!-- Remove this if you don't implement routing -->
+                    <ul id="filters">
+                        <li>
+                            <a class="selected" href="#/">All</a>
+                        </li>
+                        <li>
+                            <a href="#/active">Active</a>
+                        </li>
+                        <li>
+                            <a href="#/completed">Completed</a>
+                        </li>
+                    </ul>
+                    <button id="clear-completed">Clear completed (<span id="completedCount"></span>)</button>
+                </footer>
+            </section>
+
+            <optimizer:slot name="body"/>
+
+        </body>
+    </html>
+</c:template>

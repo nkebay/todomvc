@@ -1,0 +1,11 @@
+{
+    "name": "App",
+    "version": "1.0",
+    "description": "Wire the whole App",
+    "raptor": {
+        "dependencies": [
+            "App.js"
+        ]
+        
+    }   
+}

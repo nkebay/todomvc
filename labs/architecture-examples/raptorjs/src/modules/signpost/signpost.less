@@ -1,0 +1,55 @@
+
+@import "/modules/globals-css/mixins.less";
+
+.page{
+    width: 1200px;
+    margin: 20px auto;
+}
+
+ul.signpost{
+    border: 1px solid #aaa;
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    .border-radius(2px);
+}
+
+ul.signpost li{
+    float: left;
+    position:relative;
+    line-height: 30px;
+    text-align: center;
+}
+
+ul.signpost li:after, ul.signpost li:before {
+    left: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+ul.signpost li:after{
+    border-width: 31px;
+    top: 50%;
+    margin-top: -31px;    
+}
+
+ul.signpost li:before{
+    border-width: 32px;
+    top: 50%;
+    margin-top: -32px;   
+}
+
+ul.signpost li.step-done:after {
+    border-left-color: #fff;
+}
+
+ul.signpost li.step-done:before {
+    border-left-color: #aaa;
+    
+}

@@ -1,0 +1,12 @@
+{
+    "name": "signpost",
+    "version": "1.0",
+    "description": "Router and filter links",
+    "raptor": {
+        "dependencies": [
+            "signpost.less",
+            "signpost.js"
+        ]
+        
+    }   
+}
